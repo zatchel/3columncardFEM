@@ -1,0 +1,131 @@
+// colors primary
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+
+//paragraphs
+$transparentWhite: hsla(0, 0%, 100%, 0.75);
+
+//background, headings, buttons
+$veryLightGray: hsl(0, 0%, 95%);
+
+//fonts
+$bigText: "Big Shoulders Display", sans-serif;
+$smallText: "Lexend Deca", sans-serif;
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: $veryLightGray;
+}
+
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+.container{
+    @include flexCenter(column);
+    height: 100%;
+    margin: 3.125em 0px 3.125em 0px;
+    padding: 0;
+
+    
+    // background-color: lightseagreen;
+    
+}
+
+.container h1{
+    color: $veryLightGray;
+    padding-top: 50px;
+    padding-left: 30px;
+    font-family: $bigText;
+    font-size: 25px;
+}
+
+.container div p{
+    font-family: $smallText;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 30px 0 30px;
+    color: $transparentWhite;
+    font-size: 12px;
+}
+
+.container div{
+    border: none;
+    width: 90%;
+    flex: 1;
+    
+    
+}
+
+.sedans{
+    background-color: $brightOrange;
+    background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
+    background-repeat: no-repeat;
+    background-position: top 17px left 25px;
+    background-size: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+
+}
+
+.suv{
+    background-color: $darkCyan;
+    background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: top 17px left 25px;
+}
+
+.luxury{
+    background-color: $veryDarkCyan;
+    background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
+    background-repeat: no-repeat;
+    background-position: top 17px left 25px;
+    background-size: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button{
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 15px;
+    width: 150px;
+    border: none;
+}
+
+.button1{
+    color: $brightOrange;
+}
+
+.button2{
+    color: $darkCyan;
+}
+
+.button3{
+    color: $veryDarkCyan;
+}
+
+.attribution{
+    display: inline-block;
+    align-self: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
