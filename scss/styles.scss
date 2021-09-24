@@ -131,3 +131,20 @@ button{
     margin: 0;
     padding: 0;
   }
+
+  @media screen and (min-width: 800px) {
+    //THIS BREAKPOINT IS GOOD KEEP IT
+    //GOTTA FIX EVERYTHING TO MAKE IT MAKE SENSE
+    //IM DRUNK HAHAHAH
+    //wait move the learn more button down on mobile wtf
+    //sync it to the right on small screens maybe it looks out of place
+    //idk it's not as easy of a fix as i thought
+    //i have some work to do 
+    body{
+        flex-direction: row;
+    }
+    
+    .container{
+          flex-direction: row;
+      }
+  }
