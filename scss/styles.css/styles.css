@@ -4,8 +4,13 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -13,10 +18,19 @@ body {
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   margin: 3.125rem 0rem 3.125rem 0rem;
   padding: 0;
@@ -42,12 +56,14 @@ body {
 .container div {
   border: none;
   width: 90%;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .sedans {
   background-color: #e38826;
-  background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
+  background-image: url(/images/icon-sedans.svg);
   background-repeat: no-repeat;
   background-position: top 1.063rem left 1.563rem;
   background-size: 3.125rem;
@@ -57,7 +73,7 @@ body {
 
 .suv {
   background-color: #006970;
-  background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
+  background-image: url(/images/icon-suvs.svg);
   background-repeat: no-repeat;
   background-size: 3.125rem;
   background-position: top 1.063rem left 1.563rem;
@@ -65,7 +81,7 @@ body {
 
 .luxury {
   background-color: #004241;
-  background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
+  background-image: url(/images/icon-luxury.svg);
   background-repeat: no-repeat;
   background-position: top 1.063rem left 1.563rem;
   background-size: 3.125rem;
@@ -75,7 +91,7 @@ body {
 
 button {
   margin-left: 3.125rem;
-  margin-top: 0.625rem;
+  margin-top: 2.188rem;
   margin-bottom: 0.625rem;
   border-radius: 1.875rem;
   padding: 0.938rem;
@@ -98,7 +114,9 @@ button {
 .attribution {
   display: inline-block;
   color: cyan;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   height: auto;
   margin: 0;
   padding: 0;
@@ -109,26 +127,37 @@ button {
     margin: 0;
     padding: 0;
   }
-
   body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 0;
     padding: 0;
     height: 100vh;
     background-color: #f2f2f2;
   }
-
   .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 100%;
-    margin: 10.6888rem 16.25rem;
+    margin: 3.125rem 16.25rem;
     padding: 0;
   }
-
   .container h1 {
     color: #f2f2f2;
     padding-top: 3.125rem;
@@ -136,7 +165,6 @@ button {
     font-family: "Big Shoulders Display", sans-serif;
     font-size: 1.563rem;
   }
-
   .container div p {
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
@@ -145,46 +173,41 @@ button {
     color: rgba(255, 255, 255, 0.75);
     font-size: 0.75rem;
   }
-
-  .container div {
-    border: none;
-    width: 90%;
-    flex: 1;
-  }
-
   .sedans {
     background-repeat: no-repeat;
     background-position: top 1.063rem left 1.563rem;
     background-size: 3.125rem;
     background-color: #e38826;
-    height: 100%;
     background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
     border-top-left-radius: 0.625rem;
     border-bottom-left-radius: 0.625rem;
     border-top-right-radius: 0;
   }
-
   .suv {
     background-repeat: no-repeat;
     background-position: top 1.063rem left 1.563rem;
     background-size: 3.125rem;
     background-color: #006970;
-    height: 100%;
     background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
   }
-
   .luxury {
     background-repeat: no-repeat;
     background-position: top 1.063rem left 1.563rem;
     background-size: 3.125rem;
     background-color: #004241;
-    height: 100%;
     background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
     border-bottom-right-radius: 0.625rem;
     border-bottom-left-radius: 0rem;
     border-top-right-radius: 0.625rem;
   }
-
+  .container div {
+    border: yellow;
+    width: 90%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 60%;
+  }
   button {
     margin-left: 3.125rem;
     margin-top: 0.625rem;
@@ -194,25 +217,25 @@ button {
     width: 9.375rem;
     border: none;
   }
-
   .button1 {
     color: #e38826;
   }
-
   .button2 {
     color: #006970;
   }
-
   .button3 {
     color: #004241;
   }
-
   .attribution {
     display: inline-block;
     color: cyan;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     height: auto;
     margin: 0;
     padding: 0;
+    background-color: blue;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */

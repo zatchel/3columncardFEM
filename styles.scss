@@ -74,7 +74,7 @@ body{
 
 .sedans{
     background-color: $brightOrange;
-    background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
+    background-image: url(/images/icon-sedans.svg);
     background-repeat: no-repeat;
     background-position: top 1.063rem left 1.563rem;
     background-size: 3.125rem;
@@ -86,7 +86,7 @@ body{
 
 .suv{
     background-color: $darkCyan;
-    background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
+    background-image: url(/images/icon-suvs.svg);
     background-repeat: no-repeat;
     background-size: 3.125rem;
     background-position: top 1.063rem left 1.563rem;
@@ -94,7 +94,7 @@ body{
 
 .luxury{
     background-color: $veryDarkCyan;
-    background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
+    background-image: url(/images/icon-luxury.svg);
     background-repeat: no-repeat;
     background-position: top 1.063rem left 1.563rem;
     background-size: 3.125rem;
@@ -103,8 +103,8 @@ body{
 }
 
 button{
-    margin-left: 3.125rem;
-    margin-top: 0.625rem;
+    margin-left: 3.125rem; //50px
+    margin-top: 2.188rem;  //35px
     margin-bottom: 0.625rem;
     border-radius: 1.875rem;
     padding: 0.938rem;
@@ -147,7 +147,7 @@ button{
  
 
  
-  @media screen and (min-width: 50rem) {
+@media screen and (min-width: 50rem) {
     //THIS BREAKPOINT IS GOOD KEEP IT
     //GOTTA FIX EVERYTHING TO MAKE IT MAKE SENSE
     //IM DRUNK HAHAHAH
@@ -179,8 +179,12 @@ button{
     }
     
         
-        // background-color: lightseagreen;
-        
+    .container{
+        @include flexCenter(row);
+        height: 100%;
+        margin: 3.125rem 16.25rem;
+        padding: 0;
+    }
 
     .container h1{
         color: $veryLightGray;
@@ -207,7 +211,7 @@ button{
         background-size: 3.125rem;
     }
 
-    .
+    
 
 
     .sedans{
@@ -217,6 +221,7 @@ button{
         border-top-left-radius: 0.625rem;
         border-bottom-left-radius: 0.625rem;
         border-top-right-radius: 0;
+        
     
     }
     
@@ -239,7 +244,7 @@ button{
         border: yellow;
         width: 90%;
         flex: 1;
-        height: 50%;
+        height: 60%;
     }
     
     button{
@@ -271,6 +276,7 @@ button{
         height: auto;
         margin: 0;
         padding: 0;
+        background-color: blue;
       }
 
-    }
+}
