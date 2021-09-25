@@ -16,6 +16,7 @@ $smallText: "Lexend Deca", sans-serif;
 html{
     margin: 0;
     padding: 0;
+    
 }
 
 body{
@@ -38,7 +39,7 @@ body{
 .container{
     @include flexCenter(column);
     height: 100%;
-    margin: 3.125em 0px 3.125em 0px;
+    margin: 3.125rem 0rem 3.125rem 0rem;
     padding: 0;
 
     
@@ -48,19 +49,19 @@ body{
 
 .container h1{
     color: $veryLightGray;
-    padding-top: 50px;
-    padding-left: 30px;
+    padding-top: 3.125rem;
+    padding-left: 1.875rem;
     font-family: $bigText;
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 
 .container div p{
     font-family: $smallText;
     font-weight: 400;
     margin: 0;
-    padding: 0 30px 0 30px;
+    padding: 0 1.875rem 0 1.875rem;
     color: $transparentWhite;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .container div{
@@ -75,10 +76,10 @@ body{
     background-color: $brightOrange;
     background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
     background-repeat: no-repeat;
-    background-position: top 17px left 25px;
-    background-size: 50px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    background-position: top 1.063rem left 1.563rem;
+    background-size: 3.125rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
     
 
 }
@@ -87,27 +88,27 @@ body{
     background-color: $darkCyan;
     background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
     background-repeat: no-repeat;
-    background-size: 50px;
-    background-position: top 17px left 25px;
+    background-size: 3.125rem;
+    background-position: top 1.063rem left 1.563rem;
 }
 
 .luxury{
     background-color: $veryDarkCyan;
     background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
     background-repeat: no-repeat;
-    background-position: top 17px left 25px;
-    background-size: 50px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background-position: top 1.063rem left 1.563rem;
+    background-size: 3.125rem;
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
 }
 
 button{
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 30px;
-    padding: 15px;
-    width: 150px;
+    margin-left: 3.125rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    border-radius: 1.875rem;
+    padding: 0.938rem;
+    width: 9.375rem;
     border: none;
 }
 
@@ -132,7 +133,21 @@ button{
     padding: 0;
   }
 
-  @media screen and (min-width: 800px) {
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ //*************** AFTER ***************
+ 
+
+ 
+  @media screen and (min-width: 50rem) {
     //THIS BREAKPOINT IS GOOD KEEP IT
     //GOTTA FIX EVERYTHING TO MAKE IT MAKE SENSE
     //IM DRUNK HAHAHAH
@@ -140,11 +155,122 @@ button{
     //sync it to the right on small screens maybe it looks out of place
     //idk it's not as easy of a fix as i thought
     //i have some work to do 
-    body{
-        flex-direction: row;
+
+    html{
+        margin: 0;
+        padding: 0;
     }
     
-    .container{
-          flex-direction: row;
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: $veryLightGray;
+    }
+    
+    
+    @mixin flexCenter($direction) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: $direction;
+    }
+    
+        
+        // background-color: lightseagreen;
+        
+
+    .container h1{
+        color: $veryLightGray;
+        padding-top: 3.125rem;
+        padding-left: 1.875rem;
+        font-family: $bigText;
+        font-size: 1.563rem;
+    }
+    
+    .container div p{
+        font-family: $smallText;
+        font-weight: 400;
+        margin: 0;
+        padding: 0 1.875rem 0 1.875rem;
+        color: $transparentWhite;
+        font-size: 0.75rem;
+    }
+
+
+    
+    @mixin imgPosition(){
+        background-repeat: no-repeat;
+        background-position: top 1.063rem left 1.563rem;
+        background-size: 3.125rem;
+    }
+
+    .
+
+
+    .sedans{
+        @include imgPosition();
+        background-color: $brightOrange;
+        background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
+        border-top-left-radius: 0.625rem;
+        border-bottom-left-radius: 0.625rem;
+        border-top-right-radius: 0;
+    
+    }
+    
+    .suv{
+        @include imgPosition();
+        background-color: $darkCyan;
+        background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
+    }
+    
+    .luxury{
+        @include imgPosition();
+        background-color: $veryDarkCyan;
+        background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
+        border-bottom-right-radius: 0.625rem;
+        border-bottom-left-radius: 0rem;
+        border-top-right-radius: 0.625rem;
+    }
+
+    .container div{
+        border: yellow;
+        width: 90%;
+        flex: 1;
+        height: 50%;
+    }
+    
+    button{
+        margin-left: 3.125rem;
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        border-radius: 1.875rem;
+        padding: 0.938rem;
+        width: 9.375rem;
+        border: none;
+    }
+    
+    .button1{
+        color: $brightOrange;
+    }
+    
+    .button2{
+        color: $darkCyan;
+    }
+    
+    .button3{
+        color: $veryDarkCyan;
+    }
+    
+    .attribution{
+        display: inline-block;
+        color: cyan;
+        align-self: center;
+        height: auto;
+        margin: 0;
+        padding: 0;
       }
-  }
+
+    }

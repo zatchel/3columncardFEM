@@ -18,25 +18,25 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  margin: 3.125em 0px 3.125em 0px;
+  margin: 3.125rem 0rem 3.125rem 0rem;
   padding: 0;
 }
 
 .container h1 {
   color: #f2f2f2;
-  padding-top: 50px;
-  padding-left: 30px;
+  padding-top: 3.125rem;
+  padding-left: 1.875rem;
   font-family: "Big Shoulders Display", sans-serif;
-  font-size: 25px;
+  font-size: 1.563rem;
 }
 
 .container div p {
   font-family: "Lexend Deca", sans-serif;
   font-weight: 400;
   margin: 0;
-  padding: 0 30px 0 30px;
+  padding: 0 1.875rem 0 1.875rem;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .container div {
@@ -49,37 +49,37 @@ body {
   background-color: #e38826;
   background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
   background-repeat: no-repeat;
-  background-position: top 17px left 25px;
-  background-size: 50px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background-position: top 1.063rem left 1.563rem;
+  background-size: 3.125rem;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
 }
 
 .suv {
   background-color: #006970;
   background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
   background-repeat: no-repeat;
-  background-size: 50px;
-  background-position: top 17px left 25px;
+  background-size: 3.125rem;
+  background-position: top 1.063rem left 1.563rem;
 }
 
 .luxury {
   background-color: #004241;
   background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
   background-repeat: no-repeat;
-  background-position: top 17px left 25px;
-  background-size: 50px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  background-position: top 1.063rem left 1.563rem;
+  background-size: 3.125rem;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
 }
 
 button {
-  margin-left: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 30px;
-  padding: 15px;
-  width: 150px;
+  margin-left: 3.125rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  border-radius: 1.875rem;
+  padding: 0.938rem;
+  width: 9.375rem;
   border: none;
 }
 
@@ -104,12 +104,115 @@ button {
   padding: 0;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 50rem) {
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f2f2f2;
   }
 
   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    height: 100%;
+    margin: 10.6888rem 16.25rem;
+    padding: 0;
+  }
+
+  .container h1 {
+    color: #f2f2f2;
+    padding-top: 3.125rem;
+    padding-left: 1.875rem;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 1.563rem;
+  }
+
+  .container div p {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 1.875rem 0 1.875rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.75rem;
+  }
+
+  .container div {
+    border: none;
+    width: 90%;
+    flex: 1;
+  }
+
+  .sedans {
+    background-repeat: no-repeat;
+    background-position: top 1.063rem left 1.563rem;
+    background-size: 3.125rem;
+    background-color: #e38826;
+    height: 100%;
+    background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    border-top-right-radius: 0;
+  }
+
+  .suv {
+    background-repeat: no-repeat;
+    background-position: top 1.063rem left 1.563rem;
+    background-size: 3.125rem;
+    background-color: #006970;
+    height: 100%;
+    background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
+  }
+
+  .luxury {
+    background-repeat: no-repeat;
+    background-position: top 1.063rem left 1.563rem;
+    background-size: 3.125rem;
+    background-color: #004241;
+    height: 100%;
+    background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
+    border-bottom-right-radius: 0.625rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.625rem;
+  }
+
+  button {
+    margin-left: 3.125rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    border-radius: 1.875rem;
+    padding: 0.938rem;
+    width: 9.375rem;
+    border: none;
+  }
+
+  .button1 {
+    color: #e38826;
+  }
+
+  .button2 {
+    color: #006970;
+  }
+
+  .button3 {
+    color: #004241;
+  }
+
+  .attribution {
+    display: inline-block;
+    color: cyan;
+    align-self: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
