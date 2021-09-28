@@ -102,12 +102,8 @@ body{
     @include imgPosition()
 }
 
-button:hover{
-    cursor: pointer !important; 
-}
-
 button{
-    font-weight: 700;
+    font-weight: 400;
     margin-left: 3.125rem; //50px
     margin-top: 2.188rem;  //35px
     margin-bottom: 0.625rem;
@@ -115,6 +111,7 @@ button{
     padding: 0.938rem;
     width: 9.375rem;
     border: none;
+    font-family: $smallText;
 }
 
 .button1{
@@ -129,6 +126,12 @@ button{
     color: $veryDarkCyan;
 }
 
+button:hover{
+    cursor: pointer; 
+    background-color: transparent;
+    color: $veryLightGray;
+    border: 2px solid $veryLightGray;
+}
 
 .attribution{
     display: inline-block;
@@ -139,36 +142,23 @@ button{
     padding: 0;
   }
 
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
- //*************** AFTER ***************
  
+ 
+ 
+ 
+ 
+  //*************** AFTER MOBILE***************
+ 
+
+
+
+
+
 
  
 @media screen and (min-width: 50rem) {
 
-    // colors primary
-    $brightOrange: hsl(31, 77%, 52%);
-    $darkCyan: hsl(184, 100%, 22%);
-    $veryDarkCyan: hsl(179, 100%, 13%);
 
-    //paragraphs
-    $transparentWhite: hsla(0, 0%, 100%, 0.75);
-
-    //background, headings, buttons
-    $veryLightGray: hsl(0, 0%, 95%);
-
-    //fonts
-    $bigText: "Big Shoulders Display", sans-serif;
-    $smallText: "Lexend Deca", sans-serif;
 
     html{
         margin: 0;
@@ -276,18 +266,7 @@ button{
         width: 9.375rem;
         border: none;
     }
-    
-    // .container button{
-        
-    //     margin-left: 3.125rem;
-    //     margin-top: 3.875rem;
-    //     margin-bottom: 0.625rem;
-    //     margin-right: 3.125rem;
-    //     border-radius: 1.875rem;
-    //     padding: 0.938rem;
-    //     width: 9.375rem;
-    //     border: none;
-    // }
+
     
     .button1{
         @include buttonPosition();

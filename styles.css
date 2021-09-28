@@ -89,12 +89,8 @@ body {
   background-size: 3.125rem;
 }
 
-button:hover {
-  cursor: pointer !important;
-}
-
 button {
-  font-weight: 700;
+  font-weight: 400;
   margin-left: 3.125rem;
   margin-top: 2.188rem;
   margin-bottom: 0.625rem;
@@ -102,6 +98,7 @@ button {
   padding: 0.938rem;
   width: 9.375rem;
   border: none;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .button1 {
@@ -114,6 +111,13 @@ button {
 
 .button3 {
   color: #004241;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
 }
 
 .attribution {
