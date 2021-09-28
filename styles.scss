@@ -81,7 +81,7 @@ body{
 
 .sedans{
     background-color: $brightOrange;
-    background-image: url(/images/icon-sedans.svg);
+    background-image: url(icon-sedans.svg);
     border-top-left-radius: 0.625rem;
     border-top-right-radius: 0.625rem;
     @include imgPosition()
@@ -90,13 +90,13 @@ body{
 
 .suv{
     background-color: $darkCyan;
-    background-image: url(/images/icon-suvs.svg);
+    background-image: url(icon-suvs.svg);
     @include imgPosition()
 }
 
 .luxury{
     background-color: $veryDarkCyan;
-    background-image: url(/images/icon-luxury.svg);
+    background-image: url(icon-luxury.svg);
     border-bottom-left-radius: 0.625rem;
     border-bottom-right-radius: 0.625rem;
     @include imgPosition()
@@ -240,7 +240,7 @@ button{
         display:flex;
         flex-direction: column;
         background-color: $brightOrange;
-        background-image: url(/images/icon-sedans.svg);
+        background-image: url(icon-sedans.svg);
         border-top-left-radius: 0.625rem;
         border-bottom-left-radius: 0.625rem;
         border-top-right-radius: 0;
@@ -253,13 +253,13 @@ button{
     .suv{
         @include imgPosition();
         background-color: $darkCyan;
-        background-image: url(/images/icon-suvs.svg);
+        background-image: url(icon-suvs.svg);
     }
     
     .luxury{
         @include imgPosition();
         background-color: $veryDarkCyan;
-        background-image: url(/images/icon-luxury.svg);
+        background-image: url(icon-luxury.svg);
         border-bottom-right-radius: 0.625rem;
         border-bottom-left-radius: 0rem;
         border-top-right-radius: 0.625rem;
