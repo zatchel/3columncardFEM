@@ -72,37 +72,42 @@ body{
     
 }
 
-.sedans{
-    background-color: $brightOrange;
-    background-image: url(/images/icon-sedans.svg);
+@mixin imgPosition(){
     background-repeat: no-repeat;
     background-position: top 1.063rem left 1.563rem;
     background-size: 3.125rem;
+}
+
+
+.sedans{
+    background-color: $brightOrange;
+    background-image: url(/images/icon-sedans.svg);
     border-top-left-radius: 0.625rem;
     border-top-right-radius: 0.625rem;
-    
+    @include imgPosition()
 
 }
 
 .suv{
     background-color: $darkCyan;
     background-image: url(/images/icon-suvs.svg);
-    background-repeat: no-repeat;
-    background-size: 3.125rem;
-    background-position: top 1.063rem left 1.563rem;
+    @include imgPosition()
 }
 
 .luxury{
     background-color: $veryDarkCyan;
     background-image: url(/images/icon-luxury.svg);
-    background-repeat: no-repeat;
-    background-position: top 1.063rem left 1.563rem;
-    background-size: 3.125rem;
     border-bottom-left-radius: 0.625rem;
     border-bottom-right-radius: 0.625rem;
+    @include imgPosition()
+}
+
+button:hover{
+    cursor: pointer !important; 
 }
 
 button{
+    font-weight: 700;
     margin-left: 3.125rem; //50px
     margin-top: 2.188rem;  //35px
     margin-bottom: 0.625rem;
@@ -124,9 +129,10 @@ button{
     color: $veryDarkCyan;
 }
 
+
 .attribution{
     display: inline-block;
-    color: cyan;
+    color: black;
     align-self: center;
     height: auto;
     margin: 0;
@@ -148,13 +154,21 @@ button{
 
  
 @media screen and (min-width: 50rem) {
-    //THIS BREAKPOINT IS GOOD KEEP IT
-    //GOTTA FIX EVERYTHING TO MAKE IT MAKE SENSE
-    //IM DRUNK HAHAHAH
-    //wait move the learn more button down on mobile wtf
-    //sync it to the right on small screens maybe it looks out of place
-    //idk it's not as easy of a fix as i thought
-    //i have some work to do 
+
+    // colors primary
+    $brightOrange: hsl(31, 77%, 52%);
+    $darkCyan: hsl(184, 100%, 22%);
+    $veryDarkCyan: hsl(179, 100%, 13%);
+
+    //paragraphs
+    $transparentWhite: hsla(0, 0%, 100%, 0.75);
+
+    //background, headings, buttons
+    $veryLightGray: hsl(0, 0%, 95%);
+
+    //fonts
+    $bigText: "Big Shoulders Display", sans-serif;
+    $smallText: "Lexend Deca", sans-serif;
 
     html{
         margin: 0;
@@ -186,29 +200,35 @@ button{
         padding: 0;
     }
 
+    .container div{
+        width: 90%;
+        flex: 1;
+        height: 31.813rem;
+    }
+
     .container h1{
         color: $veryLightGray;
-        padding-top: 3.125rem;
+        margin-top: 3.75rem;
         padding-left: 1.875rem;
         font-family: $bigText;
-        font-size: 1.563rem;
+        font-size: 2.5rem;
     }
     
     .container div p{
         font-family: $smallText;
         font-weight: 400;
         margin: 0;
-        padding: 0 1.875rem 0 1.875rem;
+        padding: 0.625rem 1.875rem 0.625rem 1.875rem;
         color: $transparentWhite;
-        font-size: 0.75rem;
+        font-size: 0.938rem;
     }
 
 
     
     @mixin imgPosition(){
         background-repeat: no-repeat;
-        background-position: top 1.063rem left 1.563rem;
-        background-size: 3.125rem;
+        background-position: top 1.8rem left 1.78rem;
+        background-size: 4rem;
     }
 
     
@@ -216,67 +236,133 @@ button{
 
     .sedans{
         @include imgPosition();
+        height: 31.813rem;
+        display:flex;
+        flex-direction: column;
         background-color: $brightOrange;
-        background-image: url(../3-column-preview-card-component-main/images/icon-sedans.svg);
+        background-image: url(/images/icon-sedans.svg);
         border-top-left-radius: 0.625rem;
         border-bottom-left-radius: 0.625rem;
         border-top-right-radius: 0;
-        
-    
+    }
+
+    .sedans h1, .sedans button{
+        flex: none;
     }
     
     .suv{
         @include imgPosition();
         background-color: $darkCyan;
-        background-image: url(../3-column-preview-card-component-main/images/icon-suvs.svg);
+        background-image: url(/images/icon-suvs.svg);
     }
     
     .luxury{
         @include imgPosition();
         background-color: $veryDarkCyan;
-        background-image: url(../3-column-preview-card-component-main/images/icon-luxury.svg);
+        background-image: url(/images/icon-luxury.svg);
         border-bottom-right-radius: 0.625rem;
         border-bottom-left-radius: 0rem;
         border-top-right-radius: 0.625rem;
     }
 
-    .container div{
-        border: yellow;
-        width: 90%;
-        flex: 1;
-        height: 60%;
-    }
     
-    button{
+    @mixin buttonPosition(){
         margin-left: 3.125rem;
-        margin-top: 0.625rem;
+        margin-top: 3.875rem;
         margin-bottom: 0.625rem;
+        margin-right: 3.125rem;
         border-radius: 1.875rem;
         padding: 0.938rem;
         width: 9.375rem;
         border: none;
     }
     
+    // .container button{
+        
+    //     margin-left: 3.125rem;
+    //     margin-top: 3.875rem;
+    //     margin-bottom: 0.625rem;
+    //     margin-right: 3.125rem;
+    //     border-radius: 1.875rem;
+    //     padding: 0.938rem;
+    //     width: 9.375rem;
+    //     border: none;
+    // }
+    
     .button1{
+        @include buttonPosition();
         color: $brightOrange;
     }
     
     .button2{
+        margin-left: 3.125rem;
+        margin-top: 5.15rem;
+        margin-bottom: 0.625rem;
+        margin-right: 3.125rem;
+        border-radius: 1.875rem;
+        padding: 0.938rem;
+        width: 9.375rem;
+        border: none;
         color: $darkCyan;
     }
     
     .button3{
+        @include buttonPosition();
         color: $veryDarkCyan;
     }
     
-    .attribution{
-        display: inline-block;
-        color: cyan;
-        align-self: center;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        background-color: blue;
-      }
 
+}
+
+//********* BREAKPOINTS FOR BUTTON POSITIONING *****************
+
+@media screen and (min-width: 79.688rem){
+    .button3{
+        margin-top: 2.625rem;
+    }
+    .button2{
+        margin-top: 3.9rem;
+    }
+}
+
+@media screen and (min-width: 80.75rem){
+    .button3{
+        margin-top: 3.8rem;
+    }
+}
+
+@media screen and (min-width: 88.375rem){
+    .button3{
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (min-width: 88.875rem){
+    .button1{
+        margin-top: 5.05rem;
+    }
+}
+
+@media screen and (min-width: 90.563rem){
+    .button2{
+        margin-top: 5.1rem;
+    }
+}
+
+@media screen and (min-width: 99.875rem){
+    .button1{
+        margin-top: 6.25rem;
+    }
+}
+
+@media screen and (min-width: 102.688rem){
+    .button2{
+        margin-top: 6.25rem;
+    }
+}
+
+@media screen and (min-width: 103.125rem){
+    .button3{
+        margin-top: 6.2rem;
+    }
 }
