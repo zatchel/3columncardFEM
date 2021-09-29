@@ -202,7 +202,7 @@ button:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     background-color: #e38826;
-    background-image: url(icon-sedans.svg);
+    background-image: url(/images/icon-sedans.svg);
     border-top-left-radius: 0.625rem;
     border-bottom-left-radius: 0.625rem;
     border-top-right-radius: 0;
@@ -217,14 +217,14 @@ button:hover {
     background-position: top 1.8rem left 1.78rem;
     background-size: 4rem;
     background-color: #006970;
-    background-image: url(icon-suvs.svg);
+    background-image: url(/images/icon-suvs.svg);
   }
   .luxury {
     background-repeat: no-repeat;
     background-position: top 1.8rem left 1.78rem;
     background-size: 4rem;
     background-color: #004241;
-    background-image: url(icon-luxury.svg);
+    background-image: url(/images/icon-luxury.svg);
     border-bottom-right-radius: 0.625rem;
     border-bottom-left-radius: 0rem;
     border-top-right-radius: 0.625rem;
