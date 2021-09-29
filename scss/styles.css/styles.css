@@ -63,7 +63,7 @@ body {
 
 .sedans {
   background-color: #e38826;
-  background-image: url(icon-sedans.svg);
+  background-image: url(/images/icon-sedans.svg);
   border-top-left-radius: 0.625rem;
   border-top-right-radius: 0.625rem;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@ body {
 
 .suv {
   background-color: #006970;
-  background-image: url(icon-suvs.svg);
+  background-image: url(/images/icon-suvs.svg);
   background-repeat: no-repeat;
   background-position: top 1.063rem left 1.563rem;
   background-size: 3.125rem;
@@ -81,7 +81,7 @@ body {
 
 .luxury {
   background-color: #004241;
-  background-image: url(icon-luxury.svg);
+  background-image: url(/images/icon-luxury.svg);
   border-bottom-left-radius: 0.625rem;
   border-bottom-right-radius: 0.625rem;
   background-repeat: no-repeat;
